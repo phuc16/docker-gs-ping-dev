@@ -43,4 +43,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Deploy
-        uses: docker compose up -d --build@v3
+        run: docker compose up -d --build

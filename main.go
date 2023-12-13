@@ -35,7 +35,7 @@ func main() {
 		return c.JSON(http.StatusOK, struct{ Status string }{Status: "OK"})
 	})
 
-	e.POST("/send", func(c echo.Context) error {
+	e.POST("/sender", func(c echo.Context) error {
 		return sendHandler(db, c)
 	})
 

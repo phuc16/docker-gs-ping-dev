@@ -4,8 +4,7 @@ services:
   docker-gs-ping-roach:
     depends_on: 
       - roach
-    build:
-      context: .
+    image: phuc16/docker-gs-ping-dev:latest
     container_name: rest-server
     hostname: rest-server
     networks:

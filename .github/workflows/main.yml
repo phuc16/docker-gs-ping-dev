@@ -28,6 +28,9 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+      - 
+        name: Set DB PASSWORD
+        run: export PGPASSWORD=123456
       -
         name: Deploy
         run: docker compose up -d --build

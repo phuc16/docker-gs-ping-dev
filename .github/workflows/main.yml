@@ -33,4 +33,4 @@ jobs:
         run: export PGPASSWORD=123456
       -
         name: Deploy
-        run: docker compose up -d --build
+        run: kubectl apply -f docker-go-kubernetes.yaml
